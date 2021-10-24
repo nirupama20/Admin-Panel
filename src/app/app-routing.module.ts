@@ -1,7 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+const routes: Routes = [
+ 
+  {
+    path:"dashboard",
+    component:DashboardComponent
+  },
+  {
+    path:"create-student",
+    component:UserCreateComponent
+  },
+  {
+    path:"user-list",
+    component:UserListComponent
+  },
+  {
+    path:"user-edit/:id",
+    component:UserEditComponent
+  },
+  
 
-const routes: Routes = [];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
